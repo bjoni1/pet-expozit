@@ -1,70 +1,87 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Animal Catalog
 
-## Available Scripts
+This project is a simple React application that displays a catalog of animals divided by type (Cats, Dogs, Birds). Users can browse through different types of animals, search for specific animals, and view detailed information in a pop-up modal.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+animal-catalog/
+├── public/
+│ └── index.html
+├── src/
+│ ├── components/
+│ │ ├── AboutUs.js
+│ │ ├── AnimalCard.js
+│ │ ├── AnimalGallery.js
+│ │ ├── ContactUs.js
+│ │ ├── Menu.js
+│ │ ├── Popup.js
+│ ├── App.js
+│ ├── index.js
+│ ├── index.css
+└── package.json
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project locally, you need to have Node.js and npm installed on your machine. Follow the instructions below to set up and run the project.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (https://nodejs.org/)
+- npm (https://www.npmjs.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**
+   
+   git clone https://github.com/your-username/animal-catalog.git
+   cd animal-catalog
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**
+   
+     npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server**
+   
+    npm start
+   
+5. Open your browser and navigate to http://localhost:3000 to see the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Components
+1. **App.js**
+The main component that sets up the application structure, including the header, main content area, and footer.
 
-## Learn More
+2. **Menu.js**
+A navigation menu that allows users to switch between different animal types and other sections (About Us, Contact Us).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **AnimalGallery.js**
+Fetches and displays a gallery of animal cards based on the selected type. Includes a search bar to filter animals by name.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **AnimalCard.js**
+Represents a single animal card in the gallery. Clicking on the card opens a pop-up with more detailed information.
 
-### Code Splitting
+5. **Popup.js**
+Displays detailed information about the selected animal in a modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. **AboutUs.js**
+Displays information about the project or organization.
 
-### Analyzing the Bundle Size
+7. **ContactUs.js**
+Displays contact information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+8. **index.js**
+The entry point of the React application. Renders the App component.
 
-### Making a Progressive Web App
+9. **index.css**
+Contains the CSS styles for the entire application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## APIs Used
+Dogs API: https://freetestapi.com/apis/dogs
+Cats API: https://freetestapi.com/apis/cats
+Birds API: https://freetestapi.com/apis/birds
+These APIs are used to fetch data for the different animal types displayed in the application.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
