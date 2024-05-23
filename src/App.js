@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Menu from './components/Menu';
+import AnimalGallery from './components/AnimalGallery';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 
-function App() {
+const App = () => {
+  const [selectedType, setSelectedType] = useState('Dogs');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Pet Expo</h1>
+        <Menu setSelectedType={setSelectedType} />
       </header>
+      <main>
+        {selectedType === 'About' && <AboutUs />}
+        {selectedType === 'Contact' && <ContactUs />}
+        {selectedType !== 'About' && selectedType !== 'Contact' && (
+          <AnimalGallery type={selectedType} />
+        )}
+      </main>
+      <footer>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
